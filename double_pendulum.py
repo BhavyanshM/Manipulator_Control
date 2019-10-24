@@ -27,15 +27,15 @@ j = np.array([	[0,0],
 
 # Pendulum rod lengths (m), bob masses (kg).
 L1, L2 = 200, 200
-M1, M2 = 10, 10
+M1, M2 = 100, 10
 # The gravitational acceleration (m.s-2).
 g = 9.81
 
-y0 = np.array([np.pi+0.1, 0, np.pi, 0])
+y0 = np.array([np.pi+0.01, 0, np.pi, 0])
 theta1 = y0[0]
 theta2 = y0[2]
-theta1dot=0
-theta2dot=0
+theta1dot= y0[1]
+theta2dot= y0[3]
 
 def init():
     return line,traj
